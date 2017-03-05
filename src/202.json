@@ -1,0 +1,183 @@
+{
+  "title": "测试首页",
+  "desc": null,
+  "icon": null,
+  "pages": [
+    {
+      "id": 1,
+      "name": "页面1",
+      "background": {
+        "color": "#fafafa",
+        "image": "http://olqeerf0y.bkt.clouddn.com/FhHvh4Zfac66kae2rNFPIZ67-8Su"
+      },
+      "widgets": [
+        {
+          "id": 1,
+          "name": "图片1",
+          "style": {
+            "width": 358,
+            "height": 358,
+            "left": -20,
+            "top": 67,
+            "opacity": 1,
+            "borderRadius": 0,
+            "borderWidth": 0,
+            "borderColor": "transparent",
+            "borderStyle": "",
+            "transform": {
+              "rotate": 0
+            }
+          },
+          "animations": [
+            {
+              "name": "rotateIn$1",
+              "duration": 1,
+              "timing": "ease-out",
+              "delay": 0,
+              "count": 1,
+              "direction": ""
+            }
+          ],
+          "url": "http://olqeerf0y.bkt.clouddn.com/FhZEQQ2PRE8kldOXJ7Ow5oFy8uD5",
+          "type": "image"
+        },
+        {
+          "id": 2,
+          "name": "图片2",
+          "style": {
+            "width": 153,
+            "height": 156,
+            "left": 92,
+            "top": 1,
+            "opacity": 1,
+            "borderRadius": 0,
+            "borderWidth": 0,
+            "borderColor": "transparent",
+            "borderStyle": "",
+            "transform": {
+              "rotate": 0
+            }
+          },
+          "animations": [
+            {
+              "name": "zoomIn$1",
+              "duration": 1,
+              "timing": "linear",
+              "delay": 0.5,
+              "count": 1,
+              "direction": ""
+            },
+            {
+              "name": "flip",
+              "duration": 1,
+              "timing": "linear",
+              "delay": 0,
+              "count": 1,
+              "direction": "East"
+            }
+          ],
+          "url": "http://olqeerf0y.bkt.clouddn.com/FoeNyhqWHMD3IfkaXToYRz-t3AxK",
+          "type": "image"
+        },
+        {
+          "id": 3,
+          "name": "图片3",
+          "style": {
+            "width": 139,
+            "height": 46,
+            "left": 85,
+            "top": 415,
+            "opacity": 1,
+            "borderRadius": 0,
+            "borderWidth": 0,
+            "borderColor": "transparent",
+            "borderStyle": "",
+            "transform": {
+              "rotate": 0
+            }
+          },
+          "animations": [
+            {
+              "name": "fadeIn$1",
+              "duration": 1,
+              "timing": "ease-out",
+              "delay": 0,
+              "count": 1,
+              "direction": "Up"
+            }
+          ],
+          "url": "http://olqeerf0y.bkt.clouddn.com/FobRfonYZzYJGzusDhq7oFLUx4lk",
+          "type": "image"
+        },
+        {
+          "id": 4,
+          "name": "图片4",
+          "style": {
+            "width": 297,
+            "height": 105,
+            "left": 10,
+            "top": 199,
+            "opacity": 0.55,
+            "borderRadius": 149,
+            "borderWidth": 24,
+            "borderColor": "rgb(218, 156, 156)",
+            "borderStyle": "solid",
+            "transform": {
+              "rotate": 0
+            }
+          },
+          "animations": [
+            {
+              "name": "fadeIn$1",
+              "duration": 1,
+              "timing": "ease-out",
+              "delay": 0,
+              "count": 1,
+              "direction": "Down"
+            }
+          ],
+          "url": "http://olqeerf0y.bkt.clouddn.com/FvnZFX8sH2fDjRC2vHbFOAU8bTUL",
+          "type": "image"
+        },
+        {
+          "id": 5,
+          "name": "文本5",
+          "style": {
+            "width": 160,
+            "height": 32,
+            "left": 117,
+            "top": 327,
+            "opacity": 1,
+            "borderRadius": 0,
+            "borderWidth": 0,
+            "borderColor": "rgb(233, 168, 168)",
+            "borderStyle": "solid",
+            "transform": {
+              "rotate": 0
+            },
+            "lineHeight": 1.4,
+            "fontSize": 16,
+            "color": "rgb(244, 231, 231)",
+            "textAlign": "left",
+            "fontWeight": "bold",
+            "fontStyle": "italic",
+            "textDecoration": "underline",
+            "backgroundColor": "transparent"
+          },
+          "animations": [],
+          "content": "输入文本",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "页面2",
+      "background": {
+        "color": "#fafafa",
+        "image": "http://olqeerf0y.bkt.clouddn.com/FikU483rRJFrLJMHHz_S23soT0V0"
+      },
+      "widgets": []
+    }
+  ]
+}
