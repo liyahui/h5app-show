@@ -5,7 +5,8 @@
         v-for="widget in data.widgets"
         :data="widget"
         :key="`${data.id}-${widget.id}`"
-        :play="show">
+        :play="show"
+        @change-page="$emit('change-page', $event)">
       </widget>
     </div>
   </transition>
@@ -75,7 +76,6 @@
   $duration: 0.6s;
   @import '~assets/page/slide.scss';
   @import '~assets/page/fade.scss';
-  @import '~assets/page/extract.scss';
   @import '~assets/page/push.scss';
   @import '~assets/page/rotate.scss';
   @import '~assets/page/zoom.scss';

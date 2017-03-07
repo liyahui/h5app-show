@@ -3,6 +3,7 @@ import App from './App'
 
 import 'animate.css'
 import 'assets/animate'
+import 'assets/iconfont'
 
 Vue.config.productionTip = false
 

@@ -17,6 +17,7 @@
 	/* eslint-disable */
 	import { VIEWPORT_WIDTH, VIEWPORT_HEIGHT }	from 'utils'
 	import extend from 'extend'
+  import Hammer from 'hammerjs'
 
   export default {
   	props: {
@@ -75,6 +76,26 @@
   		},
       stopAnimation() {
         this.$el.style.animation = ''
+      },
+      handleEvent() {
+        const { name, target, value } = this.data.event
+        if (!name || !target || !value) return
+
+        const widget = new Hammer(this.$el)
+
+        widget.on(name, e => {
+          switch (target) {
+            case 'page':
+              this.$emit('change-page', value)
+            break
+            case 'link':
+              window.location.href = value
+            break
+            case 'tel':
+              window.location.href = `tel:${value}`
+            break
+          }
+        })
       }
   	},
   	watch: {
@@ -94,7 +115,8 @@
   		}
   	},
   	mounted() {
-  		this.$el.addEventListener('webkitAnimationEnd', this.playAnimation, false)
+      this.$el.addEventListener('webkitAnimationEnd', this.playAnimation, false)
+      this.handleEvent()
   	}
   }
 </script>
