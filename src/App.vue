@@ -6,28 +6,40 @@
       :key="page.id"
       :data="page"
       :action="action"
-      :direction="app.extends.direction">
+      :z-index="pageZindex(index)"
+      :direction="app.extends.direction"
+      :effect="app.extends.effect">
     </page>
 
     <loading 
-      v-if="pageIndex === -1"
+      v-if="pageIndex === -1 && !message"
       :progress="progress">
     </loading>
+
+    <message
+      v-if="message"
+      :text="message">
+    </message>
   </div>
 </template>
 
 <script>
   /* eslint-disable */
-  import { autoPX, VIEWPORT_WIDTH, VIEWPORT_HEIGHT, loadImages }  from 'utils'
+  import { API_HOST, VIEWPORT_WIDTH, VIEWPORT_HEIGHT, loadImages }  from 'utils'
   import axios from 'axios'
   import loading from 'components/loading'
   import page from 'components/page'
+  import message from 'components/message'
   import Hammer from 'hammerjs'
+  import queryString from 'query-string'
+
+  axios.defaults.baseURL = API_HOST
 
   export default {
     components: {
       page,
-      loading
+      loading,
+      message
     },
     computed: {
       appStyle() {
@@ -64,13 +76,18 @@
         this.height = height
       },
       async fetchAppData() {
-        const res = await axios.get('http://localhost:8888/data/2.json')
-        this.app = res.data
+        const params = queryString.parse(window.location.search, true)
 
-        document.title = res.data.title
+        const res = await axios.get(`data/${params.id}.json`)
 
-        this.loadAppImages()
-        this.listenSwipeEvent()
+        if (res.data.code === 1) {
+          this.message = res.data.message
+        } else {
+          this.app = res.data
+          document.title = res.data.title || '未命名'
+          this.loadAppImages()
+          this.listenSwipeEvent()
+        }
       },
       loadAppImages() {
         loadImages(this.images, {
@@ -123,6 +140,9 @@
             this.pageIndex = this.app.pages.length - 1
           }
         })
+      },
+      pageZindex(index) {
+        return this.action === 'next' ? index : this.app.pages.length - index
       }
     },
     data() {
@@ -132,7 +152,8 @@
         height: VIEWPORT_HEIGHT,
         action: '',
         pageIndex: -1,
-        progress: 0
+        progress: 0,
+        message: ''
       }
     },
     created() {

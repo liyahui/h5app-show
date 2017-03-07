@@ -1,0 +1,77 @@
+// 垂直推压切换
+@keyframes verticalPushIn {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes verticalPushOut {
+  from {
+    transform: scaleY(1);
+  }
+  to {
+    transform: scaleY(0);
+  }
+}
+
+.vertical-push-next-enter-active,
+.vertical-push-prev-enter-active {
+  animation: verticalPushIn $duration;
+}
+
+.vertical-push-next-enter-active,
+.vertical-push-prev-leave-active {
+  transform-origin: bottom center;
+}
+
+.vertical-push-next-leave-active,
+.vertical-push-prev-leave-active {
+  animation: verticalPushOut $duration;
+}
+
+.vertical-push-next-leave-active,
+.vertical-push-prev-enter-active {
+  transform-origin: top center;
+}
+
+// 水平推压切换
+@keyframes horizontalPushIn {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes horizontalPushOut {
+  from {
+    transform: scaleX(1);
+  }
+  to {
+    transform: scaleX(0);
+  }
+}
+
+.horizontal-push-next-enter-active,
+.horizontal-push-prev-enter-active {
+  animation: horizontalPushIn $duration;
+}
+
+.horizontal-push-next-enter-active,
+.horizontal-push-prev-leave-active {
+  transform-origin: right center;
+}
+
+.horizontal-push-next-leave-active,
+.horizontal-push-prev-leave-active {
+  animation: horizontalPushOut $duration;
+}
+
+.horizontal-push-next-leave-active,
+.horizontal-push-prev-enter-active {
+  transform-origin: left center;
+}

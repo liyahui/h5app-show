@@ -2,8 +2,7 @@
 export const VIEWPORT_WIDTH = 320
 export const VIEWPORT_HEIGHT = 504
 
-// 自动增加 px 的 css 属性
-export const autoPX = ['width', 'height', 'top', 'left', 'fontSize', 'borderRadius', 'borderWidth']
+export const API_HOST = process.env.NODE_ENV === 'production' ? 'http://liyahui.cn:8888' : 'http://localhost:8888'
 
 // 图片加载进度
 export const loadImages = (list = [], options) => {
@@ -17,6 +16,12 @@ export const loadImages = (list = [], options) => {
 
   if (options.directory && !options.directory.endsWith('/')) {
     options.directory += '/'
+  }
+
+  if (!list.length) {
+    options.progress(100)
+    options.complete()
+    return
   }
 
   let current = 0

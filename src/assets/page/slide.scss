@@ -1,0 +1,33 @@
+// 垂直上下切换
+.vertical-slide-next-enter-active {
+  animation: slideInUp $duration;
+}
+
+.vertical-slide-next-leave-active {
+  animation: slideOutUp $duration;
+}
+
+.vertical-slide-prev-enter-active {
+  animation: slideInDown $duration;
+}
+
+.vertical-slide-prev-leave-active {
+  animation: slideOutDown $duration;
+}
+
+// 水平左右切换
+.horizontal-slide-next-enter-active {
+  animation: slideInRight $duration;
+}
+
+.horizontal-slide-next-leave-active {
+  animation: slideOutLeft $duration;
+}
+
+.horizontal-slide-prev-enter-active {
+  animation: slideInLeft $duration;
+}
+
+.horizontal-slide-prev-leave-active {
+  animation: slideOutRight $duration;
+}

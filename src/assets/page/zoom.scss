@@ -1,0 +1,63 @@
+// 缩放 & 推压缩放
+$zoomScale: 0.2;
+@keyframes pageZoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d($zoomScale, $zoomScale, $zoomScale);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pageZoomOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: scale3d($zoomScale, $zoomScale, $zoomScale);
+  }
+}
+
+.vertical-zoom-push-next-enter-active,
+.vertical-zoom-push-prev-enter-active,
+.horizontal-zoom-push-next-enter-active,
+.horizontal-zoom-push-prev-enter-active,
+.vertical-zoom-next-enter-active,
+.vertical-zoom-prev-enter-active,
+.horizontal-zoom-next-enter-active,
+.horizontal-zoom-prev-enter-active {
+  animation: pageZoomIn $duration;
+}
+
+.vertical-zoom-push-next-leave-active,
+.vertical-zoom-push-prev-leave-active,
+.horizontal-zoom-push-next-leave-active,
+.horizontal-zoom-push-prev-leave-active,
+.vertical-zoom-next-leave-active,
+.vertical-zoom-prev-leave-active,
+.horizontal-zoom-next-leave-active,
+.horizontal-zoom-prev-leave-active {
+  animation: pageZoomOut $duration;
+}
+
+.vertical-zoom-push-prev-leave-active,
+.vertical-zoom-push-next-enter-active {
+  transform-origin: bottom center;
+}
+
+.vertical-zoom-push-prev-enter-active,
+.vertical-zoom-push-next-leave-active {
+  transform-origin: top center;
+}
+
+.horizontal-zoom-push-prev-leave-active,
+.horizontal-zoom-push-next-enter-active {
+  transform-origin: right center;
+}
+
+.horizontal-zoom-push-prev-enter-active,
+.horizontal-zoom-push-next-leave-active {
+  transform-origin: left center;
+}

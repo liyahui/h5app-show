@@ -1,0 +1,43 @@
+@keyframes fadeInBig {
+	from {
+		opacity: 0;
+		transform: scale3d(1.5, 1.5, 1.5);
+	}
+
+	to {
+		opacity: 1;
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+@keyframes fadeOutBig {
+	from {
+		opacity: 1;
+		transform: scale3d(1, 1, 1);
+	}
+
+	to {
+		opacity: 0;
+		transform: scale3d(1.5, 1.5, 1.5);
+	}
+}
+
+@keyframes rotateEast {
+	from {
+		transform: rotate3d(0, 0, 1, 0deg);
+	}
+
+	to {
+		transform: rotate3d(0, 0, 1, 360deg);
+	}
+}
+
+@keyframes rotateWest {
+	from {
+		transform: rotate3d(0, 0, 1, 360deg);
+	}
+
+	to {
+		transform: rotate3d(0, 0, 1, 0deg);
+	}
+}

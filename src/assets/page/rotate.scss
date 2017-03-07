@@ -1,0 +1,69 @@
+@keyframes nextRotateIn {
+  from {
+    transform: rotate3d(0, 0, 1, 180deg);
+  }
+  to {
+    transform: rotate3d(0, 0, 1, 0);
+  }
+}
+
+@keyframes nextRotateOut {
+  from {
+    transform: rotate3d(0, 0, 1, 0);
+  }
+  to {
+    transform: rotate3d(0, 0, 1, -180deg);
+  }
+}
+
+@keyframes prevRotateIn {
+  from {
+    transform: rotate3d(0, 0, 1, -180deg);
+  }
+  to {
+    transform: rotate3d(0, 0, 1, 0);
+  }
+}
+
+@keyframes prevRotateOut {
+  from {
+    transform: rotate3d(0, 0, 1, 0);
+  }
+  to {
+    transform: rotate3d(0, 0, 1, 180deg);
+  }
+}
+
+.vertical-rotate-next-enter-active,
+.vertical-rotate-next-leave-active,
+.vertical-rotate-prev-enter-active,
+.vertical-rotate-prev-leave-active {
+  transform-origin: left center;
+}
+
+.horizontal-rotate-next-enter-active,
+.horizontal-rotate-next-leave-active,
+.horizontal-rotate-prev-enter-active,
+.horizontal-rotate-prev-leave-active {
+  transform-origin: bottom center;
+}
+
+.vertical-rotate-next-enter-active,
+.horizontal-rotate-next-enter-active {
+  animation: nextRotateIn $duration;
+}
+
+.vertical-rotate-next-leave-active,
+.horizontal-rotate-next-leave-active {
+  animation: nextRotateOut $duration;
+}
+
+.vertical-rotate-prev-enter-active,
+.horizontal-rotate-prev-enter-active {
+  animation: prevRotateIn $duration;
+}
+
+.vertical-rotate-prev-leave-active,
+.horizontal-rotate-prev-leave-active {
+  animation: prevRotateOut $duration;
+}

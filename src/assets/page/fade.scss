@@ -1,0 +1,15 @@
+// 淡入切换 
+.vertical-fade-next-enter-active,
+.vertical-fade-prev-enter-active,
+.horizontal-fade-next-enter-active,
+.horizontal-fade-prev-enter-active {
+	animation: fadeIn $duration;
+}
+
+// 淡出切换
+.vertical-fade-next-leave-active,
+.vertical-fade-prev-leave-active,
+.horizontal-fade-next-leave-active,
+.horizontal-fade-prev-leave-active {
+	animation: fadeOut $duration;
+}

@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App'
 
 import 'animate.css'
+import 'assets/animate'
 
 Vue.config.productionTip = false
 

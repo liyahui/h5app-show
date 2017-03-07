@@ -15,7 +15,7 @@
 
 <script>
 	/* eslint-disable */
-	import { autoPX, VIEWPORT_WIDTH, VIEWPORT_HEIGHT }	from 'utils'
+	import { VIEWPORT_WIDTH, VIEWPORT_HEIGHT }	from 'utils'
 	import extend from 'extend'
 
   export default {
