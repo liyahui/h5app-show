@@ -7,7 +7,7 @@ export const VIEWPORT_HEIGHT = 504
 // 是否微信
 export const isWechat = userAgent.indexOf('micromessenger') !== -1
 
-export const API_HOST = process.env.NODE_ENV === 'production' ? 'http://liyahui.cn:8888' : 'http://192.168.99.175:8888'
+export const API_HOST = process.env.NODE_ENV === 'production' ? 'http://liyahui.cn:8888' : 'http://localhost:8888'
 
 // 图片加载进度
 export const loadImages = (list = [], options) => {
